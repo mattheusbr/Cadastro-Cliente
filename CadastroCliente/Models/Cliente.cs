@@ -15,6 +15,7 @@ namespace CadastroCliente.Models
         public string Nome { get; set; }
         public DateTime DataNascimento { get; set; }
         public Sexo Sexo { get; set; }
+        public virtual List<Endereco> Enderecos { get; set; }
 
     }
     public enum Sexo
