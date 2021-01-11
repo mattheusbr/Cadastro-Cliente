@@ -18,7 +18,8 @@ namespace CadastroCliente.Models
         public string Nome { get; set; }
 
         [Required(ErrorMessage = "Campo Obrigatório.")]
-        [Display(Name = "Data-Nascimento")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime DataNascimento { get; set; }
 
         [Required(ErrorMessage = "Selecione uma opção.")]
