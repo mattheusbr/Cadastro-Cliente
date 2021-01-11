@@ -30,18 +30,18 @@
                         Estado = c.String(unicode: false),
                         Cidade = c.String(unicode: false),
                         Numero = c.String(unicode: false),
-                        Cliente = c.Int(nullable: false),
+                        ClienteId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.IdEndereco)
-                .ForeignKey("dbo.Cliente", t => t.Cliente, cascadeDelete: false)
-                .Index(t => t.Cliente);
+                .ForeignKey("dbo.Cliente", t => t.ClienteId, cascadeDelete: true)
+                .Index(t => t.ClienteId);
             
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Endereco", "Cliente", "dbo.Cliente");
-            DropIndex("dbo.Endereco", new[] { "Cliente" });
+            DropForeignKey("dbo.Endereco", "ClienteId", "dbo.Cliente");
+            DropIndex("dbo.Endereco", new[] { "ClienteId" });
             DropTable("dbo.Endereco");
             DropTable("dbo.Cliente");
         }

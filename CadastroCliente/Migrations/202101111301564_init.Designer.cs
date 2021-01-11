@@ -13,7 +13,7 @@ namespace CadastroCliente.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202101111220340_init"; }
+            get { return "202101111301564_init"; }
         }
         
         string IMigrationMetadata.Source

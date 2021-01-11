@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
-using MySql.Data.EntityFramework;
 
 
 namespace CadastroCliente.Data
@@ -18,5 +17,6 @@ namespace CadastroCliente.Data
         }
 
         public DbSet<CadastroCliente.Models.ClienteModel> Clientes { get; set; }
+        public DbSet<CadastroCliente.Models.EnderecoModel> Enderecos  { get; set; }
     }
 }
