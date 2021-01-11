@@ -8,10 +8,10 @@ using System.Web;
 namespace CadastroCliente.Models
 {
     [Table("Endereco")]
-    public class Endereco
+    public class EnderecoModel
     {
         [Key]
-        public int Id { get; set; }
+        public int IdEndereco { get; set; }
         public string CEP { get; set; }
         public string Logradouro { get; set; }
         public string Complemento { get; set; }
@@ -21,7 +21,7 @@ namespace CadastroCliente.Models
         public string Numero { get; set; }
 
         [ForeignKey("Cliente")]
-        public virtual Cliente Fk_Cliente { get; set; }
+        public virtual ClienteModel Fk_Cliente { get; set; }
         public int Cliente { get; set; }
     }
 }

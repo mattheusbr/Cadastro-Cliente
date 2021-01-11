@@ -8,14 +8,14 @@ using System.Web;
 namespace CadastroCliente.Models
 {
     [Table("Cliente")]
-    public class Cliente
+    public class ClienteModel
     {
         [Key]
-        public int Id { get; set; }
+        public int IdCliente { get; set; }
         public string Nome { get; set; }
         public DateTime DataNascimento { get; set; }
         public Sexo Sexo { get; set; }
-        public virtual List<Endereco> Enderecos { get; set; }
+        public virtual List<EnderecoModel> Enderecos { get; set; }
 
     }
     public enum Sexo
