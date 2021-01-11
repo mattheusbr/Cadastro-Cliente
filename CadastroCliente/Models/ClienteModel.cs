@@ -14,6 +14,7 @@ namespace CadastroCliente.Models
         public int IdCliente { get; set; }
             
         [Required(ErrorMessage = "Campo Obrigatório.")]
+        [Display(Prompt = "teste")]
         public string Nome { get; set; }
 
         [Required(ErrorMessage = "Campo Obrigatório.")]
