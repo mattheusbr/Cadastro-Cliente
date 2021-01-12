@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
+using System.Net.Http;
 using System.Web.Mvc;
 using CadastroCliente.Data;
 using CadastroCliente.Models;
+using CadastroCliente.ViewModel;
 
 namespace CadastroCliente.Controllers
 {
@@ -47,13 +47,25 @@ namespace CadastroCliente.Controllers
         // obter mais detalhes, veja https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IdCliente,Nome,DataNascimento,Sexo")] ClienteModel clienteModel)
+        public ActionResult Create(CadastroCliViewModel clienteModel)
         {
+            var teste = ModelState.Values;
             if (ModelState.IsValid)
             {
-                db.Clientes.Add(clienteModel);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                try
+                {
+                    db.Clientes.Add(clienteModel.Cliente);
+                    db.Enderecos.Add(clienteModel.Endereco);
+                    db.SaveChanges();
+
+                    return RedirectToAction("Index");
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+
             }
 
             return View(clienteModel);
@@ -79,7 +91,7 @@ namespace CadastroCliente.Controllers
         // obter mais detalhes, veja https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IdCliente,Nome,DataNascimento,Sexo")] ClienteModel clienteModel)
+        public ActionResult Edit([Bind(Include = "IdCliente,Nome,DataNascimento,Sexo,IdEndereco,CEP,Logradouro,Complemento,Bairro,Estado,Cidade,Numero")] ClienteModel clienteModel)
         {
             if (ModelState.IsValid)
             {

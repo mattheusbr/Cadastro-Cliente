@@ -13,11 +13,10 @@ namespace CadastroCliente.Models
         [Key]
         public int IdCliente { get; set; }
             
-        [Required(ErrorMessage = "Campo Obrigatório.")]
-        [Display(Prompt = "teste")]
+        [Required(ErrorMessage = "Campo Nome Obrigatório.")]
         public string Nome { get; set; }
 
-        [Required(ErrorMessage = "Campo Obrigatório.")]
+        [Required(ErrorMessage = "Campo Data-Nascimento Obrigatório.")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime DataNascimento { get; set; }

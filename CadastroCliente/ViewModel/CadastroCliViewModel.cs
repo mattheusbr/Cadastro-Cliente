@@ -8,6 +8,7 @@ namespace CadastroCliente.ViewModel
 {
     public class CadastroCliViewModel
     {
+        public int Id { get; set; }
         public ClienteModel Cliente { get; set; }
         public EnderecoModel Endereco { get; set; }
     }
