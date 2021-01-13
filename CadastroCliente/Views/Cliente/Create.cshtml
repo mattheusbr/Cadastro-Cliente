@@ -36,7 +36,7 @@
                 <div class="form-group">
                     @Html.LabelFor(model => model.Cliente.DataNascimento, "Data-Nascimento", htmlAttributes: new { @class = "control-label col-md-5" })
                     <div class="col-md-10">
-                        @Html.EditorFor(model => model.Cliente.DataNascimento, new { htmlAttributes = new { @class = "form-control col-md-5", placeholder = "DD/MM/AAAA" } })
+                        @Html.EditorFor(model => model.Cliente.DataNascimento, new { htmlAttributes = new { @class = "form-control col-md-5", placeholder = "DD/MM/AAAA", id = "datanascimento", OnBlur = "verificarDataNascimento(datanascimento.value)" } })
                         @Html.ValidationMessageFor(model => model.Cliente.DataNascimento, "", new { @class = "text-danger" })
                     </div>
                 </div>
@@ -50,8 +50,7 @@
         <div class="card-body">
             <label for="cep" style="margin-left: 16px">CEP</label>
             <div class="input-group mb-3">
-                @Html.EditorFor(model => model.Endereco.CEP, new { htmlAttributes = new { @class = "form-control control-label col-md-5", placeholder = "Apenas números", id = "cep", style = "margin-left:16px", type = "search", maxlength = "8", pattern = "[0-9]+$"} })
-                @*<input id="cep" type="search" class="form-control control-label col-md-5" maxlength="8" pattern="[0-9]+$" style="margin-left:16px" placeholder="Apenas números" aria-label="Recipient's username" aria-describedby="basic-addon2">*@
+                @Html.EditorFor(model => model.Endereco.CEP, new { htmlAttributes = new { @class = "form-control control-label col-md-5", placeholder = "Apenas números", id = "cep", style = "margin-left:16px", type = "search", maxlength = "8", pattern = "[0-9]+$" } })
                 <div class="input-group-append">
                     <button class="btn btn-outline-primary" type="button" onclick="buscarcep(cep.value)">Pesquisar</button>
                 </div>
@@ -121,6 +120,29 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
-    <script src="~/Content/js/buscacep.js"></script>
+    <script src="~/Content/js/buscacep.js"></script>,
+    <script type="text/javascript">
+        function verificarDataNascimento(date) {
+            if (date != null && date != "") {
+                var dataInformada = formatarData(date, 'pt-br');
+                let partes = dataInformada.split('/')
+                let dataAtual = new Date()
 
+                dataInformada = new Date(partes[2], partes[1] - 1, partes[0])
+
+                if (dataInformada > dataAtual) {
+                    document.getElementById('datanascimento').value = ("");
+                    alert("A data de nascimento não pode ser maior que a data atual.");
+                }
+            }
+        }
+
+        function formatarData(data, formato) {
+            if (formato == 'pt-br') {
+                return (data.substr(0, 10).split('-').reverse().join('/'));
+            } else {
+                return (data.substr(0, 10).split('/').reverse().join('-'));
+            }
+        }
+    </script>
 }
