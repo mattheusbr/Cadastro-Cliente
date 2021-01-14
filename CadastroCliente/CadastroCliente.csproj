@@ -188,66 +188,33 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Data\HomoContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202101111301564_init.cs" />
-    <Compile Include="Migrations\202101111301564_init.designer.cs">
-      <DependentUpon>202101111301564_init.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202101111825302_subindo.cs" />
-    <Compile Include="Migrations\202101111825302_subindo.designer.cs">
-      <DependentUpon>202101111825302_subindo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202101121755540_teste.cs" />
-    <Compile Include="Migrations\202101121755540_teste.designer.cs">
-      <DependentUpon>202101121755540_teste.cs</DependentUpon>
+    <Compile Include="Migrations\202101141728421_init.cs" />
+    <Compile Include="Migrations\202101141728421_init.designer.cs">
+      <DependentUpon>202101141728421_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ClienteModel.cs" />
-    <Compile Include="Models\EnderecoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModel\CadastroCliViewModel.cs" />
-    <Compile Include="ViewModel\ConsultaCepViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\css\pag-produto.css" />
-    <Content Include="Content\css\sb-admin.css" />
-    <Content Include="Content\css\sb-admin.min.css" />
-    <Content Include="Content\css\style.css" />
-    <Content Include="Content\img\01.png" />
-    <Content Include="Content\img\02.jpg" />
+    <Content Include="Content\css\sb-admin-2.css" />
+    <Content Include="Content\css\sb-admin-2.min.css" />
+    <Content Include="Content\favicon.ico" />
+    <Content Include="Content\img\icon_user.svg" />
+    <Content Include="Content\img\login.svg" />
+    <Content Include="Content\img\Registro.svg" />
+    <Content Include="Content\img\undraw_posting_photo.svg" />
     <Content Include="Content\js\buscacep.js" />
     <Content Include="Content\js\demo\chart-area-demo.js" />
     <Content Include="Content\js\demo\chart-bar-demo.js" />
     <Content Include="Content\js\demo\chart-pie-demo.js" />
     <Content Include="Content\js\demo\datatables-demo.js" />
-    <Content Include="Content\js\sb-admin.js" />
-    <Content Include="Content\js\sb-admin.min.js" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\.gitignore" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\dist\jquery.mask.js" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\dist\jquery.mask.min.js" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\Gruntfile.js" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\package.js" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\src\jquery.mask.js" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\test\jquery.mask.test.js" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\test\qunit.css" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\test\qunit.js" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\test\sinon-1.10.3.js" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\test\sinon-qunit-1.0.0.js" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\test\sinon-qunit.js" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\test\test-for-jquery-1.11.1.html" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\test\test-for-jquery-1.7.2.html" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\test\test-for-jquery-1.8.3.html" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\test\test-for-jquery-1.9.1.html" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\test\test-for-jquery-2.1.1.html" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\test\test-for-jquery-3.0.0.html" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\test\test-for-zepto.html" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\test\zepto\data.js" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\test\zepto\event.js" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\test\zepto\zepto.min.js" />
+    <Content Include="Content\js\sb-admin-2.js" />
+    <Content Include="Content\js\sb-admin-2.min.js" />
     <Content Include="Content\vendor\bootstrap\js\bootstrap.bundle.js" />
     <Content Include="Content\vendor\bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="Content\vendor\bootstrap\js\bootstrap.js" />
@@ -262,6 +229,7 @@
     <Content Include="Content\vendor\datatables\dataTables.bootstrap4.min.js" />
     <Content Include="Content\vendor\datatables\jquery.dataTables.js" />
     <Content Include="Content\vendor\datatables\jquery.dataTables.min.js" />
+    <Content Include="Content\vendor\datatables\tradução_datatables.js" />
     <Content Include="Content\vendor\fontawesome-free\css\all.css" />
     <Content Include="Content\vendor\fontawesome-free\css\all.min.css" />
     <Content Include="Content\vendor\fontawesome-free\css\brands.css" />
@@ -280,6 +248,8 @@
     <Content Include="Content\vendor\fontawesome-free\js\all.min.js" />
     <Content Include="Content\vendor\fontawesome-free\js\brands.js" />
     <Content Include="Content\vendor\fontawesome-free\js\brands.min.js" />
+    <Content Include="Content\vendor\fontawesome-free\js\conflict-detection.js" />
+    <Content Include="Content\vendor\fontawesome-free\js\conflict-detection.min.js" />
     <Content Include="Content\vendor\fontawesome-free\js\fontawesome.js" />
     <Content Include="Content\vendor\fontawesome-free\js\fontawesome.min.js" />
     <Content Include="Content\vendor\fontawesome-free\js\regular.js" />
@@ -341,6 +311,7 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\btc.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\buffer.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\buromobelexperte.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\brands\buy-n-large.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\buysellads.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\canadian-maple-leaf.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\cc-amazon-pay.svg" />
@@ -365,6 +336,7 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\confluence.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\connectdevelop.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\contao.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\brands\cotton-bureau.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\cpanel.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\creative-commons-by.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\creative-commons-nc-eu.svg" />
@@ -386,7 +358,9 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\cuttlefish.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\d-and-d-beyond.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\d-and-d.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\brands\dailymotion.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\dashcube.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\brands\deezer.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\delicious.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\deploydog.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\deskpro.svg" />
@@ -408,6 +382,7 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\dyalog.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\earlybirds.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\ebay.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\brands\edge-legacy.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\edge.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\elementor.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\ello.svg" />
@@ -427,6 +402,7 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\fedex.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\fedora.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\figma.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\brands\firefox-browser.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\firefox.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\first-order-alt.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\first-order.svg" />
@@ -467,6 +443,7 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\goodreads-g.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\goodreads.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\google-drive.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\brands\google-pay.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\google-play.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\google-plus-g.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\google-plus-square.svg" />
@@ -489,7 +466,9 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\houzz.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\html5.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\hubspot.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\brands\ideal.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\imdb.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\brands\instagram-square.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\instagram.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\intercom.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\internet-explorer.svg" />
@@ -530,6 +509,7 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\markdown.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\mastodon.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\maxcdn.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\brands\mdb.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\medapps.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\medium-m.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\medium.svg" />
@@ -537,9 +517,11 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\meetup.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\megaport.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\mendeley.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\brands\microblog.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\microsoft.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\mix.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\mixcloud.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\brands\mixer.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\mizuni.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\modx.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\monero.svg" />
@@ -558,6 +540,7 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\openid.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\opera.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\optin-monster.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\brands\orcid.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\osi.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\page4.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\pagelines.svg" />
@@ -573,6 +556,7 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\pied-piper-alt.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\pied-piper-hat.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\pied-piper-pp.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\brands\pied-piper-square.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\pied-piper.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\pinterest-p.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\pinterest-square.svg" />
@@ -603,6 +587,7 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\rev.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\rocketchat.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\rockrms.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\brands\rust.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\safari.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\salesforce.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\sass.svg" />
@@ -613,6 +598,7 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\sellsy.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\servicestack.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\shirtsinbulk.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\brands\shopify.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\shopware.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\simplybuilt.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\sistrix.svg" />
@@ -649,6 +635,7 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\superpowers.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\supple.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\suse.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\brands\swift.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\symfony.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\teamspeak.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\telegram-plane.svg" />
@@ -658,6 +645,7 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\themeco.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\themeisle.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\think-peaks.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\brands\tiktok.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\trade-federation.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\trello.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\tripadvisor.svg" />
@@ -670,7 +658,10 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\uber.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\ubuntu.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\uikit.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\brands\umbraco.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\uniregistry.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\brands\unity.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\brands\unsplash.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\untappd.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\ups.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\usb.svg" />
@@ -925,6 +916,9 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\backspace.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\backward.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\bacon.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\bacteria.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\bacterium.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\bahai.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\balance-scale-left.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\balance-scale-right.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\balance-scale.svg" />
@@ -971,6 +965,7 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\border-style.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\bowling-ball.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\box-open.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\box-tissue.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\box.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\boxes.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\braille.svg" />
@@ -1009,6 +1004,7 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\car-crash.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\car-side.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\car.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\caravan.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\caret-down.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\caret-left.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\caret-right.svg" />
@@ -1092,6 +1088,7 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\comments.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\compact-disc.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\compass.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\compress-alt.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\compress-arrows-alt.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\compress.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\concierge-bell.svg" />
@@ -1128,6 +1125,7 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\dice.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\digital-tachograph.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\directions.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\disease.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\divide.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\dizzy.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\dna.svg" />
@@ -1168,6 +1166,7 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\exclamation-circle.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\exclamation-triangle.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\exclamation.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\expand-alt.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\expand-arrows-alt.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\expand.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\external-link-alt.svg" />
@@ -1178,6 +1177,7 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\fan.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\fast-backward.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\fast-forward.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\faucet.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\fax.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\feather-alt.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\feather.svg" />
@@ -1282,7 +1282,9 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\hammer.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\hamsa.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\hand-holding-heart.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\hand-holding-medical.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\hand-holding-usd.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\hand-holding-water.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\hand-holding.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\hand-lizard.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\hand-middle-finger.svg" />
@@ -1295,16 +1297,25 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\hand-pointer.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\hand-rock.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\hand-scissors.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\hand-sparkles.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\hand-spock.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\hands-helping.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\hands-wash.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\hands.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\handshake-alt-slash.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\handshake-slash.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\handshake.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\hanukiah.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\hard-hat.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\hashtag.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\hat-cowboy-side.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\hat-cowboy.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\hat-wizard.svg" />
-    <Content Include="Content\vendor\fontawesome-free\svgs\solid\haykal.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\hdd.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\head-side-cough-slash.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\head-side-cough.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\head-side-mask.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\head-side-virus.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\heading.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\headphones-alt.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\headphones.svg" />
@@ -1324,6 +1335,7 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\horse.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\hospital-alt.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\hospital-symbol.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\hospital-user.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\hospital.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\hot-tub.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\hotdog.svg" />
@@ -1333,6 +1345,7 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\hourglass-start.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\hourglass.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\house-damage.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\house-user.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\hryvnia.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\i-cursor.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\ice-cream.svg" />
@@ -1365,6 +1378,7 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\landmark.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\language.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\laptop-code.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\laptop-house.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\laptop-medical.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\laptop.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\laugh-beam.svg" />
@@ -1395,6 +1409,8 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\long-arrow-alt-up.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\low-vision.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\luggage-cart.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\lungs-virus.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\lungs.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\magic.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\magnet.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\mail-bulk.svg" />
@@ -1447,6 +1463,7 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\motorcycle.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\mountain.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\mouse-pointer.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\mouse.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\mug-hot.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\music.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\network-wired.svg" />
@@ -1484,6 +1501,7 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\pen.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\pencil-alt.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\pencil-ruler.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\people-arrows.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\people-carry.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\pepper-hot.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\percent.svg" />
@@ -1502,6 +1520,7 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\place-of-worship.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\plane-arrival.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\plane-departure.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\plane-slash.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\plane.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\play-circle.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\play.svg" />
@@ -1526,6 +1545,8 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\print.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\procedures.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\project-diagram.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\pump-medical.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\pump-soap.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\puzzle-piece.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\qrcode.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\question-circle.svg" />
@@ -1539,6 +1560,7 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\rainbow.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\random.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\receipt.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\record-vinyl.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\recycle.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\redo-alt.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\redo.svg" />
@@ -1587,6 +1609,7 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\share.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\shekel-sign.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\shield-alt.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\shield-virus.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\ship.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\shipping-fast.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\shoe-prints.svg" />
@@ -1602,6 +1625,7 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\signal.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\signature.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\sim-card.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\sink.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\sitemap.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\skating.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\skiing-nordic.svg" />
@@ -1622,6 +1646,7 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\snowflake.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\snowman.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\snowplow.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\soap.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\socks.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\solar-panel.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\sort-alpha-down-alt.svg" />
@@ -1662,8 +1687,11 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\sticky-note.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\stop-circle.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\stop.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\stopwatch-20.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\stopwatch.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\store-alt-slash.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\store-alt.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\store-slash.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\store.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\stream.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\street-view.svg" />
@@ -1723,6 +1751,7 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\tired.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\toggle-off.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\toggle-on.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\toilet-paper-slash.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\toilet-paper.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\toilet.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\toolbox.svg" />
@@ -1733,6 +1762,7 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\tractor.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\trademark.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\traffic-light.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\trailer.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\train.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\tram.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\transgender-alt.svg" />
@@ -1787,6 +1817,7 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\user-times.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\user.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\users-cog.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\users-slash.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\users.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\utensil-spoon.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\utensils.svg" />
@@ -1799,6 +1830,9 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\video-slash.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\video.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\vihara.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\virus-slash.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\virus.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\solid\viruses.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\voicemail.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\volleyball-ball.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\solid\volume-down.svg" />
@@ -1844,29 +1878,27 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\.jshintrc" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\.ruby-version" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\.travis.yml" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\bower.json" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\CHANGELOG.md" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\component.json" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\composer.json" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\CONTRIBUTING.md" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\deploy.rb" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\docker-compose.yml" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\Dockerfile" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\ISSUE_TEMPLATE.md" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\LICENSE" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\package-lock.json" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\package.json" />
-    <Content Include="Content\lib\jQuery-Mask-Plugin\README.md" />
-    <Content Include="Content\scss\sb-admin.scss" />
+    <Content Include="Content\scss\navs\_global.scss" />
+    <Content Include="Content\scss\navs\_sidebar.scss" />
+    <Content Include="Content\scss\navs\_topbar.scss" />
+    <Content Include="Content\scss\sb-admin-2.scss" />
+    <Content Include="Content\scss\utilities\_animation.scss" />
+    <Content Include="Content\scss\utilities\_background.scss" />
+    <Content Include="Content\scss\utilities\_border.scss" />
+    <Content Include="Content\scss\utilities\_display.scss" />
+    <Content Include="Content\scss\utilities\_progress.scss" />
+    <Content Include="Content\scss\utilities\_rotate.scss" />
+    <Content Include="Content\scss\utilities\_text.scss" />
+    <Content Include="Content\scss\_buttons.scss" />
     <Content Include="Content\scss\_cards.scss" />
+    <Content Include="Content\scss\_charts.scss" />
+    <Content Include="Content\scss\_dropdowns.scss" />
+    <Content Include="Content\scss\_error.scss" />
     <Content Include="Content\scss\_footer.scss" />
     <Content Include="Content\scss\_global.scss" />
     <Content Include="Content\scss\_login.scss" />
     <Content Include="Content\scss\_mixins.scss" />
-    <Content Include="Content\scss\_navbar.scss" />
+    <Content Include="Content\scss\_navs.scss" />
     <Content Include="Content\scss\_utilities.scss" />
     <Content Include="Content\scss\_variables.scss" />
     <Content Include="Content\vendor\bootstrap\js\bootstrap.bundle.js.map" />
@@ -1915,6 +1947,7 @@
     <Content Include="Content\vendor\bootstrap\scss\utilities\_embed.scss" />
     <Content Include="Content\vendor\bootstrap\scss\utilities\_flex.scss" />
     <Content Include="Content\vendor\bootstrap\scss\utilities\_float.scss" />
+    <Content Include="Content\vendor\bootstrap\scss\utilities\_interactions.scss" />
     <Content Include="Content\vendor\bootstrap\scss\utilities\_overflow.scss" />
     <Content Include="Content\vendor\bootstrap\scss\utilities\_position.scss" />
     <Content Include="Content\vendor\bootstrap\scss\utilities\_screenreaders.scss" />
@@ -1980,6 +2013,10 @@
     <Content Include="Content\vendor\fontawesome-free\less\_shims.less" />
     <Content Include="Content\vendor\fontawesome-free\less\_stacked.less" />
     <Content Include="Content\vendor\fontawesome-free\less\_variables.less" />
+    <Content Include="Content\vendor\fontawesome-free\metadata\categories.yml" />
+    <Content Include="Content\vendor\fontawesome-free\metadata\icons.yml" />
+    <Content Include="Content\vendor\fontawesome-free\metadata\shims.yml" />
+    <Content Include="Content\vendor\fontawesome-free\metadata\sponsors.yml" />
     <Content Include="Content\vendor\fontawesome-free\package.json" />
     <Content Include="Content\vendor\fontawesome-free\scss\brands.scss" />
     <Content Include="Content\vendor\fontawesome-free\scss\fontawesome.scss" />
@@ -2035,9 +2072,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Cliente\Create.cshtml" />
     <Content Include="Views\Cliente\Delete.cshtml" />
     <Content Include="Views\Cliente\Details.cshtml" />
@@ -2057,14 +2091,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202101111301564_init.resx">
-      <DependentUpon>202101111301564_init.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101111825302_subindo.resx">
-      <DependentUpon>202101111825302_subindo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101121755540_teste.resx">
-      <DependentUpon>202101121755540_teste.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202101141728421_init.resx">
+      <DependentUpon>202101141728421_init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

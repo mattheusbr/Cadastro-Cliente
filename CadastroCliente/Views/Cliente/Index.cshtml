@@ -4,42 +4,177 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
+<title>CadastroClient - Cadastrar Clientes</title>
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Incluir Novo Cliente", "Create", "Cliente", new { @class = "btn btn-success", style= "margin-left: 25px" })
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Nome)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DataNascimento)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Sexo)
-        </th>
-        <th></th>
-    </tr>
+<div class="container-fluid">
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Listar Clientes</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayName("Código")
+                            </th>
+                            <th>
+                                @Html.DisplayName("Nome")
+                            </th>
+                            <th>
+                                @Html.DisplayName("Data Nascimento")
+                            </th>
+                            <th>
+                                @Html.DisplayName("Gênero")
+                            </th>
+                            <th>
+                                @Html.DisplayName("CEP")
+                            </th>
+                            <th>
+                                @Html.DisplayName("Logradouro")
+                            </th>
+                            <th>
+                                @Html.DisplayName("Numero")
+                            </th>
+                            <th>
+                                @Html.DisplayName("Complemento")
+                            </th>
+                            <th>
+                                @Html.DisplayName("Bairro")
+                            </th>
+                            <th>
+                                @Html.DisplayName("Cidade")
+                            </th>
+                            <th>
+                                @Html.DisplayName("Estado")
+                            </th>
+                            <th>
+                                @Html.DisplayName("Ações")
+                            </th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>
+                                @Html.DisplayName("Código")
+                            </th>
+                            <th>
+                                @Html.DisplayName("Nome")
+                            </th>
+                            <th>
+                                @Html.DisplayName("Data Nascimento")
+                            </th>
+                            <th>
+                                @Html.DisplayName("Gênero")
+                            </th>
+                            <th>
+                                @Html.DisplayName("CEP")
+                            </th>
+                            <th>
+                                @Html.DisplayName("Logradouro")
+                            </th>
+                            <th>
+                                @Html.DisplayName("Numero")
+                            </th>
+                            <th>
+                                @Html.DisplayName("Complemento")
+                            </th>
+                            <th>
+                                @Html.DisplayName("Bairro")
+                            </th>
+                            <th>
+                                @Html.DisplayName("Cidade")
+                            </th>
+                            <th>
+                                @Html.DisplayName("Estado")
+                            </th>
+                            <th>
+                                @Html.DisplayName("Ações")
+                            </th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @item.IdCliente
+                                </td>
+                                <td>
+                                    @item.Nome
+                                </td>
+                                <td>
+                                    @item.DataNascimento
+                                </td>
+                                <td>
+                                    @item.Sexo
+                                </td>
+                                <td>
+                                    @item.CEP
+                                </td>
+                                <td>
+                                    @item.Logradouro
+                                </td>
+                                <td>
+                                    @item.Numero
+                                </td>
+                                <td>
+                                    @item.Complemento
+                                </td>
+                                <td>
+                                    @item.Bairro
+                                </td>
+                                <td>
+                                    @item.Cidade
+                                </td>
+                                <td>
+                                    @item.Estado
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Editar", "Edit", new { id = item.IdCliente }, new { @class = "btn btn-sm btn-warning", style = "margin-bottom: 0.2rem;" })
+                                    <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deletarModal">Deletar</button>
+                                    @{ ViewBag.Id_Cliente = item.IdCliente; }
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nome)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DataNascimento)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Sexo)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdCliente }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IdCliente }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdCliente })
-        </td>
-    </tr>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="deletarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Você deseja deletar esse livro?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">Se deseja deletar selecione "Deletar", se foi um engano selecione "Cancelar".</div>
+            <div class="modal-footer">
+                @using (Html.BeginForm("Delete", "Cliente", new { Id = ViewData["Id_Cliente"] }, FormMethod.Post))
+                {
+                    <input type="submit" class="btn btn-danger" value="Deletar" />
+                }
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/Content/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/Content/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="~/Content/vendor/datatables/tradução_datatables.js"></script>
 }
 
-</table>
+@section Styles{
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+}

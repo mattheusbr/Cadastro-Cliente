@@ -10,49 +10,134 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>ClienteModel</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.IdCliente)
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
+    <div class="container">
+        <div class="card card-register mx-auto mt-5">
+            <div class="card-header text-center"><h5>Dados pessoais</h5></div>
+            <div class="card-body">
+                <div>
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Sexo, "Gênero", htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-10">
+                            @Html.EnumDropDownListFor(model => model.Sexo, htmlAttributes: new { @class = "form-control col-md-2", required = "required" })
+                            @Html.ValidationMessageFor(model => model.Sexo, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.DataNascimento, "Data-Nascimento", htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.DataNascimento, new { htmlAttributes = new { @class = "form-control col-md-3", placeholder = "DD/MM/AAAA", id = "datanascimento", OnBlur = "verificarDataNascimento(datanascimento.value)" } })
+                            @Html.ValidationMessageFor(model => model.DataNascimento, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
+    </div>
+    @*================================================>ENDEREÇO<=======================================================================*@
+    <div class="container">
+        <div class="card card-register mx-auto mt-5 ">
+            <div class="card-header text-center"><h5>Dados do endereço</h5></div>
+            <div class="card-body">
+                <label for="cep" style="margin-left: 16px">CEP</label>
+                <div class="input-group mb-3">
+                    @Html.EditorFor(model => model.CEP, new { htmlAttributes = new { @class = "form-control control-label col-md-5", placeholder = "Apenas números", id = "cep", style = "margin-left:16px", type = "search", maxlength = "8", pattern = "[0-9]+$" } })
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-primary" type="button" onclick="buscarcep(cep.value)">Pesquisar</button>
+                    </div>
+                </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.DataNascimento, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.DataNascimento, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.DataNascimento, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Logradouro, "Logradouro", htmlAttributes: new { @class = "control-label col-md-4" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Logradouro, new { htmlAttributes = new { @class = "form-control", id = "logradouro" } })
+                        @Html.ValidationMessageFor(model => model.Logradouro, "", new { @class = "text-danger" })
+                    </div>
+                </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Sexo, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EnumDropDownListFor(model => model.Sexo, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.Sexo, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Numero, htmlAttributes: new { @class = "control-label col-md-4" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Numero, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Numero, "", new { @class = "text-danger" })
+                    </div>
+                </div>
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Complemento, htmlAttributes: new { @class = "control-label col-md-4" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Complemento, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Complemento, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Bairro, htmlAttributes: new { @class = "control-label col-md-4" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Bairro, new { htmlAttributes = new { @class = "form-control", id = "bairro" } })
+                        @Html.ValidationMessageFor(model => model.Bairro, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Cidade, "Municipio", htmlAttributes: new { @class = "control-label col-md-4" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Cidade, new { htmlAttributes = new { @class = "form-control", id = "cidade" } })
+                        @Html.ValidationMessageFor(model => model.Cidade, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Estado, htmlAttributes: new { @class = "control-label col-md-4" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Estado, new { htmlAttributes = new { @class = "form-control", id = "estado" } })
+                        @Html.ValidationMessageFor(model => model.Estado, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-7">
+                        <input type="submit" value="Cadastrar" class="btn btn-primary" />
+                        <a class="btn btn-secondary" href="@Url.Action("index", "Cliente")">Cancelar</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 }
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
-
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Content/js/buscacep.js"></script>,
+    <script type="text/javascript">
+        function verificarDataNascimento(date) {
+            if (date != null && date != "") {
+                var dataInformada = formatarData(date);
+                let partes = dataInformada.split('/')
+                let dataAtual = new Date()
+
+                dataInformada = new Date(partes[2], partes[1] - 1, partes[0])
+
+                if (dataInformada > dataAtual) {
+                    document.getElementById('datanascimento').value = ("");
+                    alert("A data de nascimento não pode ser maior que a data atual.");
+                }
+            }
+        }
+
+        function formatarData(data) {
+            return (data.substr(0, 10).split('-').reverse().join('/'));
+        }
+    </script>
 }

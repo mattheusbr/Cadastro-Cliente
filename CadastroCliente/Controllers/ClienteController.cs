@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
+using System.Threading.Tasks;
+using System.Web;
 using System.Web.Mvc;
 using CadastroCliente.Data;
 using CadastroCliente.Models;
-using CadastroCliente.ViewModel;
 
 namespace CadastroCliente.Controllers
 {
@@ -43,24 +44,17 @@ namespace CadastroCliente.Controllers
         }
 
         // POST: Cliente/Create
+        // Para se proteger de mais ataques, habilite as propriedades específicas às quais você quer se associar. Para 
+        // obter mais detalhes, veja https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(CadastroCliViewModel clienteModel)
+        public ActionResult Create([Bind(Include = "IdCliente,Nome,DataNascimento,Sexo,CEP,Logradouro,Complemento,Bairro,Estado,Cidade,Numero")] ClienteModel clienteModel)
         {
             if (ModelState.IsValid)
             {
-                try
-                {
-                    db.Clientes.Add(clienteModel.Cliente);
-                    db.Enderecos.Add(clienteModel.Endereco);
-                    db.SaveChanges();
-
-                    return RedirectToAction("Index");
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+                db.Clientes.Add(clienteModel);
+                db.SaveChanges();
+                return RedirectToAction("Index");
             }
 
             return View(clienteModel);
@@ -82,9 +76,11 @@ namespace CadastroCliente.Controllers
         }
 
         // POST: Cliente/Edit/5
+        // Para se proteger de mais ataques, habilite as propriedades específicas às quais você quer se associar. Para 
+        // obter mais detalhes, veja https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IdCliente,Nome,DataNascimento,Sexo,IdEndereco,CEP,Logradouro,Complemento,Bairro,Estado,Cidade,Numero")] ClienteModel clienteModel)
+        public ActionResult Edit([Bind(Include = "IdCliente,Nome,DataNascimento,Sexo,CEP,Logradouro,Complemento,Bairro,Estado,Cidade,Numero")] ClienteModel clienteModel)
         {
             if (ModelState.IsValid)
             {
@@ -96,29 +92,18 @@ namespace CadastroCliente.Controllers
         }
 
         // GET: Cliente/Delete/5
-        public ActionResult Delete(int? id)
+        public async Task<ActionResult> Delete(int id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ClienteModel clienteModel = db.Clientes.Find(id);
-            if (clienteModel == null)
-            {
-                return HttpNotFound();
-            }
-            return View(clienteModel);
-        }
 
-        // POST: Cliente/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            ClienteModel clienteModel = db.Clientes.Find(id);
-            db.Clientes.Remove(clienteModel);
-            db.SaveChanges();
-            return RedirectToAction("Index");
+            var livro = await db.Clientes.FindAsync(id);
+            db.Clientes.Remove(livro);            
+            await db.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+
         }
 
         protected override void Dispose(bool disposing)

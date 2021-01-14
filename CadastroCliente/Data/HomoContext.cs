@@ -17,6 +17,5 @@ namespace CadastroCliente.Data
         }
 
         public DbSet<CadastroCliente.Models.ClienteModel> Clientes { get; set; }
-        public DbSet<CadastroCliente.Models.EnderecoModel> Enderecos  { get; set; }
     }
 }
