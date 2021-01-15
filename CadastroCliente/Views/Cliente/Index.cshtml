@@ -25,7 +25,7 @@
                                 @Html.DisplayName("Nome")
                             </th>
                             <th>
-                                @Html.DisplayName("Data Nascimento")
+                                @Html.DisplayName("Nascimento")
                             </th>
                             <th>
                                 @Html.DisplayName("Gênero")
@@ -65,7 +65,7 @@
                                 @Html.DisplayName("Nome")
                             </th>
                             <th>
-                                @Html.DisplayName("Data Nascimento")
+                                @Html.DisplayName("Nascimento")
                             </th>
                             <th>
                                 @Html.DisplayName("Gênero")
@@ -107,7 +107,7 @@
                                     @item.Nome
                                 </td>
                                 <td>
-                                    @item.DataNascimento
+                                    @item.DataNascimento.ToString("dd/MM/yyyy")
                                 </td>
                                 <td>
                                     @item.Sexo
@@ -152,12 +152,12 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Você deseja deletar esse livro?</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Você deseja deletar esse registro?</h5>
                 <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
-            <div class="modal-body">Se deseja deletar selecione "Deletar", se foi um engano selecione "Cancelar".</div>
+            <div class="modal-body">Se você deseja deletar selecione "Deletar", se foi um engano selecione "Cancelar".</div>
             <div class="modal-footer">
                 @using (Html.BeginForm("Delete", "Cliente", new { Id = ViewData["Id_Cliente"] }, FormMethod.Post))
                 {

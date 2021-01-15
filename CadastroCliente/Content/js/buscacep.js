@@ -17,13 +17,13 @@
             script.src = '//viacep.com.br/ws/' + cep + '/json/?callback=chamada';
             document.body.appendChild(script);
 
-        } 
+        }
         else {
             limpa_campos_enderecos();
             habilita_campos_endereco();
             alert("Formato de CEP inválido.");
         }
-    } 
+    }
     else {
         limpa_campos_enderecos();
         habilita_campos_endereco();
@@ -53,7 +53,7 @@ function chamada(conteudo) {
         document.getElementById('cidade').value = (conteudo.localidade);
         document.getElementById('estado').value = (conteudo.uf);
         habilita_campos_endereco();
-    } 
+    }
     else {
         limpa_campos_enderecos();
         document.getElementById('cep').value = ("");

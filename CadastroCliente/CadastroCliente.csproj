@@ -192,9 +192,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202101141728421_init.cs" />
-    <Compile Include="Migrations\202101141728421_init.designer.cs">
-      <DependentUpon>202101141728421_init.cs</DependentUpon>
+    <Compile Include="Migrations\202101151933000_db.cs" />
+    <Compile Include="Migrations\202101151933000_db.designer.cs">
+      <DependentUpon>202101151933000_db.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ClienteModel.cs" />
@@ -204,10 +204,6 @@
     <Content Include="Content\css\sb-admin-2.css" />
     <Content Include="Content\css\sb-admin-2.min.css" />
     <Content Include="Content\favicon.ico" />
-    <Content Include="Content\img\icon_user.svg" />
-    <Content Include="Content\img\login.svg" />
-    <Content Include="Content\img\Registro.svg" />
-    <Content Include="Content\img\undraw_posting_photo.svg" />
     <Content Include="Content\js\buscacep.js" />
     <Content Include="Content\js\demo\chart-area-demo.js" />
     <Content Include="Content\js\demo\chart-bar-demo.js" />
@@ -2091,8 +2087,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202101141728421_init.resx">
-      <DependentUpon>202101141728421_init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202101151933000_db.resx">
+      <DependentUpon>202101151933000_db.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

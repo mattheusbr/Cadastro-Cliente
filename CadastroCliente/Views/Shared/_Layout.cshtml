@@ -22,115 +22,115 @@
 
 </head>
 
-    <body id="page-top">
+<body id="page-top">
 
-        <!-- Page Wrapper -->
-        <div id="wrapper">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
 
-            <!-- Sidebar -->
-            <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-                <!-- Sidebar - Brand -->
-                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="@Url.Action("Index", "Cliente")">
-                    <div class="sidebar-brand-icon rotate-n-15">
-                        <i class="fas fa-book"></i>
-                    </div>
-                    <div class="sidebar-brand-text mx-3">Cadastro Client</div>
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="@Url.Action("Index", "Cliente")">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">Cadastro Client</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="@Url.Action("Index", "Cliente")">
+                    <i class="fas fa-fw  fa-list-ul"></i>
+                    <span>Listar clientes</span>
                 </a>
+            </li>
 
-                <!-- Divider -->
-                <hr class="sidebar-divider my-0">
+            <!-- Divider -->
+            <hr class="sidebar-divider">
 
-                <!-- Nav Item - Dashboard -->
-                <li class="nav-item active">
-                    <a class="nav-link" href="@Url.Action("Index", "Cliente")">
-                        <i class="fas fa-fw  fa-list-ul"></i>
-                        <span>Listar clientes</span>
-                    </a>
-                </li>
-
-                <!-- Divider -->
-                <hr class="sidebar-divider">
-
-                <!-- Heading -->
-                <div class="sidebar-heading">
-                    Admin
-                </div>
-
-                <li class="nav-item active">
-                    <a class="nav-link" href="@Url.Action("Create", "Cliente")">
-                        <i class="fas fa-fw fa-plus"></i>
-                        <span>Cadastrar</span>
-                    </a>
-                </li>
-
-                <!-- Divider -->
-                <hr class="sidebar-divider d-none d-md-block">
-
-                <!-- Sidebar Toggler (Sidebar) -->
-                <div class="text-center d-none d-md-inline">
-                    <button class="rounded-circle border-0" id="sidebarToggle"></button>
-                </div>
-
-            </ul>
-            <!-- End of Sidebar -->
-            <!-- Content Wrapper -->
-            <div id="content-wrapper" class="d-flex flex-column">
-
-                <!-- Main Content -->
-                <div id="content">
-
-                    <!-- Topbar -->
-                    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-                        <!-- Sidebar Toggle (Topbar) -->
-                        <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                            <i class="fa fa-bars"></i>
-                        </button>
-
-                    </nav>
-                    <div class="container-fluid">
-                        @RenderBody()
-                    </div>
-                    <!-- End of Topbar -->
-                </div>
-                <!-- End of Main Content -->
-                <!-- Footer -->
-                <footer class="sticky-footer bg-white">
-                    <div class="container my-auto">
-                        <div class="copyright text-center my-auto">
-                            <span>Matheus Bruno 2021</span>
-                        </div>
-                    </div>
-                </footer>
-                <!-- End of Footer -->
-
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Atalho
             </div>
-            <!-- End of Content Wrapper -->
+
+            <li class="nav-item active">
+                <a class="nav-link" href="@Url.Action("Create", "Cliente")">
+                    <i class="fas fa-fw fa-plus"></i>
+                    <span>Cadastrar Cliente</span>
+                </a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                </nav>
+                <div class="container-fluid">
+                    @RenderBody()
+                </div>
+                <!-- End of Topbar -->
+            </div>
+            <!-- End of Main Content -->
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Matheus Bruno 2021</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
 
         </div>
-        <!-- End of Page Wrapper -->
-        <!-- Scroll to Top Button-->
-        <a class="scroll-to-top rounded" href="#page-top">
-            <i class="fas fa-angle-up"></i>
-        </a>
+        <!-- End of Content Wrapper -->
 
-        <!-- Bootstrap core JavaScript-->
-        <script src="~/Content/vendor/jquery/jquery.min.js"></script>
-        <script src="~/Content/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    </div>
+    <!-- End of Page Wrapper -->
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
 
-        <!-- Core plugin JavaScript-->
-        <script src="~/Content/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="~/Content/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Content/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-        <!-- Custom scripts for all pages-->
-        <script src="~/Content/js/sb-admin-2.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="~/Content/vendor/jquery-easing/jquery.easing.min.js"></script>
 
-        <!-- Page level plugins -->
-        <script src="~/Content/vendor/chart.js/Chart.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="~/Content/js/sb-admin-2.min.js"></script>
 
-        <!-- Page level custom scripts -->
-        <script src="~/Content/js/demo/chart-area-demo.js"></script>
-        <script src="~/Content/js/demo/chart-pie-demo.js"></script>
-        @RenderSection("Scripts", required: false)
-    </body>
+    <!-- Page level plugins -->
+    <script src="~/Content/vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="~/Content/js/demo/chart-area-demo.js"></script>
+    <script src="~/Content/js/demo/chart-pie-demo.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
 </html>

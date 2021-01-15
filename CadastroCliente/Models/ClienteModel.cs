@@ -18,11 +18,12 @@ namespace CadastroCliente.Models
 
         [Required(ErrorMessage = "Campo Data-Nascimento Obrigatório.")]
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime DataNascimento { get; set; }
 
-        [Required(ErrorMessage = "Selecione uma opção.")]
-        public Sexo Sexo { get; set; }
+        [Required]
+        [Range(1, int.MaxValue, ErrorMessage = "Selecione uma opção.")]
+        public SexoEnum Sexo { get; set; }
 
         public string CEP { get; set; }
 
@@ -39,7 +40,7 @@ namespace CadastroCliente.Models
         public string Numero { get; set; }
 
     }
-    public enum Sexo
+    public enum SexoEnum
     {
         Masculino = 1,
         Feminimo = 2

@@ -4,9 +4,6 @@
     ViewBag.Title = "Edit";
 }
 
-<h2>Edit</h2>
-
-
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
@@ -16,7 +13,9 @@
             <div class="card-header text-center"><h5>Dados pessoais</h5></div>
             <div class="card-body">
                 <div>
-                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" }),
+                    @Html.HiddenFor(model => model.IdCliente)
+
                     <div class="form-group">
                         @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
@@ -37,7 +36,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.DataNascimento, "Data-Nascimento", htmlAttributes: new { @class = "control-label col-md-3" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.DataNascimento, new { htmlAttributes = new { @class = "form-control col-md-3", placeholder = "DD/MM/AAAA", id = "datanascimento", OnBlur = "verificarDataNascimento(datanascimento.value)" } })
+                            @Html.EditorFor(model => model.DataNascimento, new { htmlAttributes = new { @class = "form-control col-md-3", id = "datanascimento", placeholder = "DD/MM/AAAA", OnBlur = "verificarDataNascimento(datanascimento.value)", value = Model.DataNascimento.ToString("yyyy-MM-dd") } })
                             @Html.ValidationMessageFor(model => model.DataNascimento, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -118,26 +117,26 @@
     </div>
 }
 @section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-    <script src="~/Content/js/buscacep.js"></script>,
-    <script type="text/javascript">
-        function verificarDataNascimento(date) {
-            if (date != null && date != "") {
-                var dataInformada = formatarData(date);
-                let partes = dataInformada.split('/')
-                let dataAtual = new Date()
+@Scripts.Render("~/bundles/jqueryval")
+<script src="~/Content/js/buscacep.js"></script>,
+<script type="text/javascript">
+    function verificarDataNascimento(date) {
+        if (date != null && date != "") {
+            var dataInformada = formatarData(date);
+            let partes = dataInformada.split('/')
+            let dataAtual = new Date()
 
-                dataInformada = new Date(partes[2], partes[1] - 1, partes[0])
+            dataInformada = new Date(partes[2], partes[1] - 1, partes[0])
 
-                if (dataInformada > dataAtual) {
-                    document.getElementById('datanascimento').value = ("");
-                    alert("A data de nascimento não pode ser maior que a data atual.");
-                }
+            if (dataInformada > dataAtual) {
+                document.getElementById('datanascimento').value = ("");
+                alert("A data de nascimento não pode ser maior que a data atual.");
             }
         }
+    }
 
-        function formatarData(data) {
-            return (data.substr(0, 10).split('-').reverse().join('/'));
-        }
-    </script>
+    function formatarData(data) {
+        return (data.substr(0, 10).split('-').reverse().join('/'));
+    }
+</script>
 }

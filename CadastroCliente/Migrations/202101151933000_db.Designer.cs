@@ -7,13 +7,13 @@ namespace CadastroCliente.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class init : IMigrationMetadata
+    public sealed partial class db : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(init));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(db));
         
         string IMigrationMetadata.Id
         {
-            get { return "202101141728421_init"; }
+            get { return "202101151933000_db"; }
         }
         
         string IMigrationMetadata.Source
